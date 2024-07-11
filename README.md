@@ -1,0 +1,47 @@
+# ROS2 HRI Workspace
+
+This workspace is written for ROS2 Humble and provides packages for the XR HRI project.
+
+## Installing ROS2 Humble
+
+> Note: ROS2 Humble is already installed on some of the computers in the lab, however, you may prefer to use your own machine.
+
+ROS2 Humble can be installed natively on Ubuntu 22.04 using [these instructions](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html).
+
+If you are using Windows, you can install Ubuntu 22.04 using Windows Subsystem for Linux and use the above instructions. You can also use a docker image such as [this one](https://hub.docker.com/_/ros) which has ROS preinstalled - make sure to get the Humble version. Alternatively, [this docker image](https://hub.docker.com/r/tiryoh/ros2-desktop-vnc) also provides a graphical display in the browser for using Gazebo/Rviz - again be sure to use the Humble version.
+
+## Setup
+
+Before starting anything, source the ROS2 Humble setup file in each new terminal tab or window that you open:
+
+```bash
+source /opt/ros/humble/setup.bash
+```
+
+Each node that you run will require you to open a new terminal tab or window.
+
+## Building this Workspace
+
+To build this workspace, run:
+
+```bash
+colcon build
+```
+
+If you'd like to only build a specific package, you can use this command:
+
+```bash
+colcon build --packages-select <package_name>
+```
+
+After building, run the setup file for this workspace. Do this in every terminal tab or window that you open.
+
+```bash
+source install/setup.bash
+```
+
+## Adding a New Package
+
+Follow the [ROS tutorials](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) for instructions on how to add a new package in either C++/CMake or Python.
+
+Please add a `README.md` file to the root of your new package describing the nodes/launch files that are available and how to run them.

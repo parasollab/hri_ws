@@ -1,0 +1,30 @@
+<package format="3">
+  <name>pointcloud_to_map</name>
+  <version>0.0.0</version>
+  <description>Package to subscribe to point cloud data and create map files.</description>
+
+  <maintainer email="cmcbeth2@illinois.edu">Courtney McBeth</maintainer>
+
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>rclcpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>PCL</build_depend>
+  <build_depend>octomap</build_depend>
+  <build_depend>message_filters</build_depend>
+  <build_depend>pcl_msgs</build_depend>
+  <build_depend>octomap_msgs</build_depend>
+
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>PCL</exec_depend>
+  <exec_depend>octomap</exec_depend>
+  <exec_depend>message_filters</exec_depend>
+  <exec_depend>pcl_msgs</exec_depend>
+  <exec_depend>octomap_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
