@@ -20,6 +20,13 @@ source /opt/ros/humble/setup.bash
 
 Each node that you run will require you to open a new terminal tab or window.
 
+Initialize and update the git submodules:
+
+```bash
+git submodule init
+git submodule update
+```
+
 ## Building this Workspace
 
 To build this workspace, run:
@@ -38,6 +45,14 @@ After building, run the setup file for this workspace. Do this in every terminal
 
 ```bash
 source install/setup.bash
+```
+
+## Run the ROS TCP Endpoint for Unity
+
+Run this before any other ROS node if you are connecting to Unity:
+
+```bash
+ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=0.0.0.0
 ```
 
 ## Adding a New Package
