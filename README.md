@@ -49,7 +49,7 @@ source install/setup.bash
 
 ## Run the ROS TCP Endpoint for Unity
 
-Run this before any other ROS node if you are connecting to Unity:
+Run this before any other ROS node if you are connecting to Unity (replace the IP with your computer's IP):
 
 ```bash
 ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=0.0.0.0
