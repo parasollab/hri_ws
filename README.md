@@ -55,7 +55,7 @@ Run this before any other ROS node if you are connecting to Unity (replace the I
 ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=0.0.0.0
 ```
 
-In Unity, before building and running your project, go to `Robotics`->`ROS Settings` and change the `ROS_IP` address to the address of the computer that is running ROS (same as in the instruction above).
+In Unity, before building and running your project, go to `Robotics`->`ROS Settings` and change the `ROS IP Address` to the address of the computer that is running ROS (same as in the instruction above).
 
 ## Adding a New Package
 
