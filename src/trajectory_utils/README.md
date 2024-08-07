@@ -21,3 +21,13 @@ To run:
 ```bash
 ros2 run trajectory_utils test_publisher
 ```
+
+## test_state_publisher Node
+
+This node provides a way to test the mirror functionality for the virtual robot. It publishes random ur5e joint angles to the `physical_joint_state` topic. It should not be used if another node is publishing the real physical robot configurations.
+
+To run:
+
+```bash
+ros2 run trajectory_utils test_state_publisher
+```
