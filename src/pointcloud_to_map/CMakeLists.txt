@@ -11,6 +11,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(PCL REQUIRED COMPONENTS common io)
+find_package(pcl_conversions REQUIRED)
 find_package(octomap REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(pcl_msgs REQUIRED)
@@ -23,6 +24,7 @@ ament_target_dependencies(pointcloud_subscriber
   rclcpp
   sensor_msgs
   PCL
+  pcl_conversions
   octomap
   message_filters
   pcl_msgs
