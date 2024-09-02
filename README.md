@@ -1,21 +1,25 @@
 # ROS2 HRI Workspace
 
-This workspace is written for ROS2 Humble and provides packages for the XR HRI project.
+> Note: Tested on ROS2 Jazzy, but likely also supports Humble and Galactic.
 
-## Installing ROS2 Humble
+This workspace is written for ROS2 and provides packages for the XR HRI project.
 
-> Note: ROS2 Humble is already installed on some of the computers in the lab, however, you may prefer to use your own machine.
+## Installing ROS2
 
-ROS2 Humble can be installed natively on Ubuntu 22.04 using [these instructions](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html).
+> Note for Parasol users: ROS2 Humble is already installed on some of the computers in the lab, however, you may prefer to use your own machine.
+
+We recommend using Ubuntu 24.04 with ROS2 Jazzy, which can be installed using [these instructions](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html).
+
+Alternatively, ROS2 Humble can be installed natively on Ubuntu 22.04 using [these instructions](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html).
 
 If you are using Windows, you can install Ubuntu 22.04 using Windows Subsystem for Linux and use the above instructions. You can also use a docker image such as [this one](https://hub.docker.com/_/ros) which has ROS preinstalled - make sure to get the Humble version. Alternatively, [this docker image](https://hub.docker.com/r/tiryoh/ros2-desktop-vnc) also provides a graphical display in the browser for using Gazebo/Rviz - again be sure to use the Humble version.
 
 ## Setup
 
-Before starting anything, source the ROS2 Humble setup file in each new terminal tab or window that you open:
+Before starting anything, source the ROS2 setup file in each new terminal tab or window that you open. Swap `jazzy` for your ROS2 distribution if necessary.
 
 ```bash
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 ```
 
 Each node that you run will require you to open a new terminal tab or window.
@@ -59,6 +63,6 @@ In Unity, before building and running your project, go to `Robotics`->`ROS Setti
 
 ## Adding a New Package
 
-Follow the [ROS tutorials](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) for instructions on how to add a new package in either C++/CMake or Python.
+Follow the [ROS tutorials](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) for instructions on how to add a new package in either C++/CMake or Python.
 
 Please add a `README.md` file to the root of your new package describing the nodes/launch files that are available and how to run them.
