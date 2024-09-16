@@ -66,3 +66,20 @@ In Unity, before building and running your project, go to `Robotics`->`ROS Setti
 Follow the [ROS tutorials](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html) for instructions on how to add a new package in either C++/CMake or Python.
 
 Please add a `README.md` file to the root of your new package describing the nodes/launch files that are available and how to run them.
+
+## Feature Expansive Reward Learning (FERL)
+
+If you would like to run FERL, additionally clone this repository in the `src` directory of the workspace. We do not include it by default due to it's dependencies.
+
+```bash
+git clone https://github.com/imngui/ferl_ros2.git
+```
+
+### Dependencies
+
+FERL depends on TrajOpt and OpenRave which can be found and installed using the links below.
+
+[TrajOpt](https://github.com/courtneymcbeth/trajopt)
+
+[OpenRave](https://github.com/courtneymcbeth/openrave)
+
