@@ -23,6 +23,7 @@ setup(
             'trajectory_subscriber = trajectory_utils.trajectory_subscriber:main',
             'test_publisher = trajectory_utils.test_publisher:main',
             'test_state_publisher = trajectory_utils.test_state_publisher:main',
+            'numpy_trajectory_subscriber = trajectory_utils.numpy_trajectory_subscriber:main',
         ],
     },
 )
