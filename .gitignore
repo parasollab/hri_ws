@@ -53,3 +53,4 @@ qtcreator-*
 CATKIN_IGNORE
 
 src/trajectory_utils/trajectories/*.yaml
+src/trajectory_utils/trajectories/*.csv
