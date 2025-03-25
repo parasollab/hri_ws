@@ -10,6 +10,9 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', [
+            'launch/record_demo.launch.py',
+        ]),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,7 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'record_camera = camera_utils.record_camera:main'
+            'record_camera = camera_utils.record_camera:main',
+            'pointcloud_subscriber = camera_utils.pointcloud_subscriber:main'
         ],
     },
 )
