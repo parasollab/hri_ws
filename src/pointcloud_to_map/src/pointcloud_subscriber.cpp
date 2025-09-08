@@ -13,10 +13,10 @@
 class PointCloudSubscriber : public rclcpp::Node
 {
 public:
-    PointCloudSubscriber() : Node("pointcloud_subscriber")
+    PointCloudSubscriber(const std::string &topic_name) : Node("pointcloud_subscriber")
     {
         subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-            "point_cloud", 10, std::bind(&PointCloudSubscriber::topic_callback, this, std::placeholders::_1));
+            topic_name, 10, std::bind(&PointCloudSubscriber::topic_callback, this, std::placeholders::_1));
         octomap_publisher_ = this->create_publisher<octomap_msgs::msg::Octomap>("octomap_binary", 10);
 
         // Create directory if it doesn't exist
@@ -62,7 +62,15 @@ private:
 int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<PointCloudSubscriber>());
+
+    if (argc < 2)
+    {
+        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Usage: pointcloud_subscriber <point_cloud_topic>");
+        return 1;
+    }
+
+    std::string topic_name = argv[1];
+    rclcpp::spin(std::make_shared<PointCloudSubscriber>(topic_name));
     rclcpp::shutdown();
     return 0;
 }
