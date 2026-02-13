@@ -11,8 +11,8 @@ class RecordCamera(Node):
         super().__init__('record_camera')
 
         # Declare and get parameters
-        self.declare_parameter('camera_topic', '/camera/color/image_raw')
-        self.declare_parameter('depth_topic', '/camera/depth/image_rect_raw')
+        self.declare_parameter('camera_topic', '/camera/camera/color/image_raw')
+        self.declare_parameter('depth_topic', '/camera/camera/depth/image_rect_raw')
         self.declare_parameter('start_topic', '/record_start')
         self.declare_parameter('image_dir', '/tmp/images')
 
