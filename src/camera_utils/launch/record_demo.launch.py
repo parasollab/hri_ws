@@ -41,8 +41,8 @@ def generate_launch_description():
             executable='record_camera',
             name='record_camera_node',
             parameters=[{
-                'camera_topic': '/camera/color/image_raw',
-                'depth_topic': '/camera/depth/image_rect_raw',
+                'camera_topic': '/camera/camera/color/image_raw',
+                'depth_topic': '/camera/camera/aligned_depth_to_color/image_raw',
                 'start_topic': '/record_start',
                 'image_dir': PathJoinSubstitution([
                     TextSubstitution(text='/home/courtney/hri_ws/src/camera_utils/data/'),
