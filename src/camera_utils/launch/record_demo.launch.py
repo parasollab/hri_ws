@@ -43,6 +43,7 @@ def generate_launch_description():
             parameters=[{
                 'camera_topic': '/camera/camera/color/image_raw',
                 'depth_topic': '/camera/camera/aligned_depth_to_color/image_raw',
+                'camera_info_topic': '/camera/camera/color/camera_info',
                 'start_topic': '/record_start',
                 'image_dir': PathJoinSubstitution([
                     TextSubstitution(text='/home/courtney/hri_ws/src/camera_utils/data/'),
