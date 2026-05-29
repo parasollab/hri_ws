@@ -5,7 +5,7 @@ from datetime import datetime
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float32
+from std_msgs.msg import Int32
 
 
 class FPSMonitor(Node):
@@ -18,10 +18,10 @@ class FPSMonitor(Node):
         self._csv_path = os.path.join(output_dir, f'fps_{timestamp}.csv')
         self._initialized = False
 
-        self.create_subscription(Float32, '/fps', self._cb, 10)
+        self.create_subscription(Int32, '/fps', self._cb, 10)
         self.get_logger().info(f'FPSMonitor up. Writing to {self._csv_path}')
 
-    def _cb(self, msg: Float32):
+    def _cb(self, msg: Int32):
         now = self.get_clock().now()
         sec = now.seconds_nanoseconds()[0]
         nanosec = now.seconds_nanoseconds()[1]
@@ -31,7 +31,7 @@ class FPSMonitor(Node):
                 writer.writerow(['ros_sec', 'ros_nanosec', 'fps'])
                 self._initialized = True
             writer.writerow([sec, nanosec, msg.data])
-        self.get_logger().info(f'Unity FPS: {msg.data:.1f}')
+        self.get_logger().info(f'Unity FPS: {msg.data}')
 
 
 def main():
